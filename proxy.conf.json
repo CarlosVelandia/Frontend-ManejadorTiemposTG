@@ -1,5 +1,5 @@
 {
-  "/tiquetes-parque-diversiones/*": {
+  "/procesos-parque-diversiones/*": {
     "target": "http://localhost:8084",
     "secure" : false,
     "changeOrigin": false,

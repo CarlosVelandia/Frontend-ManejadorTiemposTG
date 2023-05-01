@@ -20,8 +20,8 @@
       "@parque/*": [
         "src/app/feature/parque/*"
       ],
-      "@tiquete/*": [
-        "src/app/feature/tiquete/*"
+      "@proceso/*": [
+        "src/app/feature/proceso/*"
       ],
       "@usuario/*": [
         "src/app/feature/usuario/*"

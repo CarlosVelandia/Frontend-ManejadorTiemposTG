@@ -1,53 +1,53 @@
 import { NavbarPage } from "../../page/navbar/navbar.po";
 import { browser } from "protractor";
 import { AppPage } from "../../app.po";
-import { CrearTiquete } from "../../page/tiquete/crear-tiquete.po";
-import { ListarTiquetes } from "../../page/tiquete/listar-tiquetes.po";
+import { CrearProceso } from "../../page/proceso/crear-proceso.po";
+import { ListarProcesos } from "../../page/proceso/listar-procesos.po";
 
-describe("Crear Tiquete", () => {
+describe("Crear Proceso", () => {
   let page: AppPage;
   let navBar: NavbarPage;
-  let listarTiquetes: ListarTiquetes;
-  let crearTiquete: CrearTiquete;
+  let listarProcesos: ListarProcesos;
+  let crearProceso: CrearProceso;
   const FECHA_COMPRA = "03-25-2021";
-  const TIQUETE_CREADO = "Tiquete creado correctamente";
+  const PROCESO_CREADO = "Proceso creado correctamente";
   const FECHA_COMPRA_LUNES= "03-29-2021";
-  const DIA_LUNES="Los Lunes no se pueden vender tiquetes por mantenimiento del parque";
+  const DIA_LUNES="Los Lunes no se pueden vender procesos por mantenimiento del parque";
 
 
   beforeEach(() => {
     page = new AppPage();
     navBar = new NavbarPage();
-    crearTiquete = new CrearTiquete();
-    listarTiquetes = new ListarTiquetes();
+    crearProceso = new CrearProceso();
+    listarProcesos = new ListarProcesos();
   });
 
-  it("Debe crear el Tiquete", () => {
+  it("Debe crear el Proceso", () => {
   //arrange
     page.navigateTo();
     browser.sleep(1000);
-    navBar.clickBotonTiquetes();
+    navBar.clickBotonProcesos();
     browser.sleep(1000);
-    listarTiquetes.clickBotonCrearTiquete();
+    listarProcesos.clickBotonCrearProceso();
     browser.sleep(1000);
-    crearTiquete.clickInputIdUsuario();
-    crearTiquete.clickOpcionIdUsuario();
+    crearProceso.clickInputIdUsuario();
+    crearProceso.clickOpcionIdUsuario();
     browser.sleep(1000);
-    crearTiquete.clickInputinputIdParque();
-    crearTiquete.clickOpcionIdParque();
+    crearProceso.clickInputinputIdParque();
+    crearProceso.clickOpcionIdParque();
     browser.sleep(1000);
-    crearTiquete.clickInputFechaCompra();
-    crearTiquete.setInputFechaCompra(FECHA_COMPRA);
+    crearProceso.clickInputFechaCompra();
+    crearProceso.setInputFechaCompra(FECHA_COMPRA);
     browser.sleep(1000);
 
     //act
-    crearTiquete.clickBotonGuardarTiquete();
+    crearProceso.clickBotonGuardarProceso();
 
     //assert
-    //const alerta = "Tiquete creado correctamente";
-    const alerta = crearTiquete.getTextoSwal();
+    //const alerta = "Proceso creado correctamente";
+    const alerta = crearProceso.getTextoSwal();
 
-    expect(alerta).toEqual(TIQUETE_CREADO);
+    expect(alerta).toEqual(PROCESO_CREADO);
     browser.sleep(1000);
   });
 
@@ -55,26 +55,26 @@ describe("Crear Tiquete", () => {
     //arrange
     page.navigateTo();
     browser.sleep(1000);
-    navBar.clickBotonTiquetes();
+    navBar.clickBotonProcesos();
     browser.sleep(1000);
-    listarTiquetes.clickBotonCrearTiquete();
+    listarProcesos.clickBotonCrearProceso();
     browser.sleep(1000);
-    crearTiquete.clickInputIdUsuario();
-    crearTiquete.clickOpcionIdUsuario();
+    crearProceso.clickInputIdUsuario();
+    crearProceso.clickOpcionIdUsuario();
     browser.sleep(1000);
-    crearTiquete.clickInputinputIdParque();
-    crearTiquete.clickOpcionIdParque();
+    crearProceso.clickInputinputIdParque();
+    crearProceso.clickOpcionIdParque();
     browser.sleep(1000);
-    crearTiquete.clickInputFechaCompra();
-    crearTiquete.setInputFechaCompra(FECHA_COMPRA_LUNES);
+    crearProceso.clickInputFechaCompra();
+    crearProceso.setInputFechaCompra(FECHA_COMPRA_LUNES);
     browser.sleep(1000);
 
       //act
-      crearTiquete.clickBotonGuardarTiquete();
+      crearProceso.clickBotonGuardarProceso();
 
       //assert
-      //const alerta = "Los lunes no se venden tiquetes";
-      const alerta = crearTiquete.getTextoSwal();
+      //const alerta = "Los lunes no se venden procesos";
+      const alerta = crearProceso.getTextoSwal();
       expect(alerta).toEqual(DIA_LUNES);
       browser.sleep(1000);
     });

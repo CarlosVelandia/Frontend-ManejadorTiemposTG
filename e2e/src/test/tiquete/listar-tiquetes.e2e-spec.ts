@@ -3,7 +3,7 @@ import { ListarParques } from "../../page/parque/listar-parques.po";
 import { browser } from "protractor";
 import { AppPage } from "../../app.po";
 
-describe("Listar tiquetes", () => {
+describe("Listar procesos", () => {
   let page: AppPage;
   let navBar: NavbarPage;
   let listarParques: ListarParques;
@@ -14,11 +14,11 @@ describe("Listar tiquetes", () => {
     listarParques = new ListarParques();
   });
 
-  it("Deberia listar tiquetes", () => {
+  it("Deberia listar procesos", () => {
     //arrange
     page.navigateTo();
     //act
-    navBar.clickBotonTiquetes();
+    navBar.clickBotonProcesos();
     browser.sleep(300);
     //assert
     expect(0).toBe(listarParques.contarParques());

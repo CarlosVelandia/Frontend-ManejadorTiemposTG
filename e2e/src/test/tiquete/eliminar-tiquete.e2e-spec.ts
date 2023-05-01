@@ -1,35 +1,35 @@
 import { NavbarPage } from "../../page/navbar/navbar.po";
 import { browser } from "protractor";
 import { AppPage } from "../../app.po";
-import { ListarTiquetes } from "../../page/tiquete/listar-tiquetes.po";
+import { ListarProcesos } from "../../page/proceso/listar-procesos.po";
 
-describe("Eliminar Tiquete", () => {
+describe("Eliminar Proceso", () => {
   let page: AppPage;
   let navBar: NavbarPage;
-  let listarTiquetes: ListarTiquetes;
-  const TIQUETE_ELIMINADO = "Tiquete eliminado correctamente";
+  let listarProcesos: ListarProcesos;
+  const PROCESO_ELIMINADO = "Proceso eliminado correctamente";
 
   beforeEach(() => {
     page = new AppPage();
     navBar = new NavbarPage();
-    listarTiquetes = new ListarTiquetes();
+    listarProcesos = new ListarProcesos();
   });
 
-  it("Debe eliminar el Tiquete", () => {
+  it("Debe eliminar el Proceso", () => {
   //arrange
     page.navigateTo();
     browser.sleep(500);
-    navBar.clickBotonTiquetes();
+    navBar.clickBotonProcesos();
     browser.sleep(500);
 
     //act
-    listarTiquetes.clickBotonEliminarTiquete();
+    listarProcesos.clickBotonEliminarProceso();
     browser.sleep(500);
 
     //assert
-    //const alerta = "El tiquete ha sido eliminado";
-    const alerta = listarTiquetes.getTextoSwal();
-    expect(alerta).toEqual(TIQUETE_ELIMINADO);
+    //const alerta = "El proceso ha sido eliminado";
+    const alerta = listarProcesos.getTextoSwal();
+    expect(alerta).toEqual(PROCESO_ELIMINADO);
     browser.sleep(500);
   });
 });

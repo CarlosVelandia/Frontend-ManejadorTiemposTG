@@ -13,7 +13,7 @@ export class AppComponent {
     { url: '/home', nombre: 'Home' },
     { url: '/usuarios', nombre: 'Usuarios' },
     { url: '/parques', nombre: 'Parques' },
-    { url: '/tiquetes', nombre: 'Tiquetes' }
+    { url: '/procesos', nombre: 'Procesos' }
   ];
 
 }

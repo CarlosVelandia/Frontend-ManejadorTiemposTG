@@ -1,28 +1,28 @@
 import { by, element } from "protractor";
 
-export class ListarTiquetes{
+export class ListarProcesos{
 
-  private tablaTiquetes = element.all(by.className("tablaTiquetes"));
-  private botonCrearTiquete = element.all(by.id("botonCrearTiquete"));
-  private botonEditarTiquete = element.all(by.id("botonEditarTiquete3"));
-  private botonEliminarTiquete = element.all(by.id("botonEliminarTiquete3"));
+  private tablaProcesos = element.all(by.className("tablaProcesos"));
+  private botonCrearProceso = element.all(by.id("botonCrearProceso"));
+  private botonEditarProceso = element.all(by.id("botonEditarProceso3"));
+  private botonEliminarProceso = element.all(by.id("botonEliminarProceso3"));
   private swal = element(by.className('swal2-title'));
 
 
-  async contarTiquetes() {
-    return this.tablaTiquetes.count();
+  async contarProcesos() {
+    return this.tablaProcesos.count();
   }
 
-  async clickBotonCrearTiquete() {
-    await this.botonCrearTiquete.click();
+  async clickBotonCrearProceso() {
+    await this.botonCrearProceso.click();
   }
 
-  async clickBotonEditarTiquete() {
-    await this.botonEditarTiquete.click();
+  async clickBotonEditarProceso() {
+    await this.botonEditarProceso.click();
   }
 
-  async clickBotonEliminarTiquete() {
-    await this.botonEliminarTiquete.click();
+  async clickBotonEliminarProceso() {
+    await this.botonEliminarProceso.click();
   }
 
   async getTextoSwal(): Promise<string> {

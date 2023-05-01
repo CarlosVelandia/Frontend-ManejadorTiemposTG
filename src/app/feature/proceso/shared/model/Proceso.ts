@@ -1,4 +1,4 @@
-export class Tiquete{
+export class Proceso{
     id:number;
     idUsuario:string;
     idParque:string;

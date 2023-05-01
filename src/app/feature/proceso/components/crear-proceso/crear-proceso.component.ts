@@ -4,26 +4,26 @@ import { SwalService } from '@core/services/swal.service';
 import { Parque } from '@parque/shared/model/Parque';
 import { ParqueService } from '@parque/shared/service/parque.service';
 import { Observable } from 'rxjs';
-import { Tiquete } from 'src/app/feature/tiquete/shared/model/Tiquete';
+import { Proceso } from 'src/app/feature/proceso/shared/model/Proceso';
 import { Usuario } from 'src/app/feature/usuario/shared/model/Usuario';
 import { UsuarioService } from 'src/app/feature/usuario/shared/service/usuario.service';
-import { TiqueteService } from '../../shared/service/tiquete.service';
+import { ProcesoService } from '../../shared/service/proceso.service';
 
 @Component({
-  selector: 'app-crear-tiquete',
-  templateUrl: './crear-tiquete.component.html',
-  styleUrls: ['./crear-tiquete.component.css']
+  selector: 'app-crear-proceso',
+  templateUrl: './crear-proceso.component.html',
+  styleUrls: ['./crear-proceso.component.css']
 })
-export class CrearTiqueteComponent implements OnInit {
+export class CrearProcesoComponent implements OnInit {
 
 
-  tiquete:Tiquete=new Tiquete();
+  proceso:Proceso=new Proceso();
   public parques:Observable<Parque[]>;
   public usuarios:Observable<Usuario[]>;
 
   constructor(
     private router:Router,
-    private service:TiqueteService,
+    private service:ProcesoService,
     private serviceParque:ParqueService,
     private serviceUsuario:UsuarioService,
     protected swalService: SwalService,
@@ -35,11 +35,11 @@ export class CrearTiqueteComponent implements OnInit {
     this.usuarios = this.serviceUsuario.getUsuarios();
   }
 
-  guardarTiquete(){
-    this.service.createTiquete(this.tiquete).subscribe(
+  guardarProceso(){
+    this.service.createProceso(this.proceso).subscribe(
       () => {
-        this.swalService.succes("Tiquete creado correctamente");
-        this.router.navigate(["tiquetes"]);
+        this.swalService.succes("Proceso creado correctamente");
+        this.router.navigate(["procesos"]);
       },
       (error) => {
         this.swalService.danger(error.error.mensaje);

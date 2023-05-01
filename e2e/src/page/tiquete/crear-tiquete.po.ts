@@ -1,10 +1,10 @@
 import { by, element } from "protractor";
 
-export class CrearTiquete {
+export class CrearProceso {
   private inputIdUsuario = element(by.id("idUsuario"));
   private inputIdParque = element(by.id("idParque"));
   private inputFechaCompra = element(by.id("fechaCompra"));
-  private botonCreaTiquete = element(by.id("guardarTiquete"));
+  private botonCreaProceso = element(by.id("guardarProceso"));
   private seleccionUsuario = element.all(by.id("usuarios"));
   private seleccionParque = element.all(by.id("parques"));
   private swal = element(by.className('swal2-title'));
@@ -41,8 +41,8 @@ export class CrearTiquete {
     return this.seleccionParque.first();
   }
 
-  async clickBotonGuardarTiquete() {
-    await this.botonCreaTiquete.click();
+  async clickBotonGuardarProceso() {
+    await this.botonCreaProceso.click();
   }
 
   async getTextoSwal(): Promise<string> {

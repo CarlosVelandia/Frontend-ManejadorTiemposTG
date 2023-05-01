@@ -3,19 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ParqueService } from '@parque/shared/service/parque.service';
 import { UsuarioService } from '@usuario/shared/service/usuario.service';
-import { CrearTiqueteComponent } from './components/crear-tiquete/crear-tiquete.component';
-import { ListarTiqueteComponent } from './components/listar-tiquete/listar-tiquete.component';
-import { TiqueteService } from './shared/service/tiquete.service';
-import { TiqueteRoutingModule } from './tiquete-routing.module';
+import { CrearProcesoComponent } from './components/crear-proceso/crear-proceso.component';
+import { ListarProcesoComponent } from './components/listar-proceso/listar-proceso.component';
+import { ProcesoService } from './shared/service/proceso.service';
+import { ProcesoRoutingModule } from './proceso-routing.module';
 
 @NgModule({
   declarations: [
-    CrearTiqueteComponent,
-    ListarTiqueteComponent
+    CrearProcesoComponent,
+    ListarProcesoComponent
   ],
 
   imports: [
-    TiqueteRoutingModule,
+    ProcesoRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     CommonModule
@@ -29,9 +29,9 @@ import { TiqueteRoutingModule } from './tiquete-routing.module';
   ],
 
   providers: [
-    TiqueteService,
+    ProcesoService,
     ParqueService,
     UsuarioService
   ]
 })
-export class TiqueteModule { }
+export class ProcesoModule { }

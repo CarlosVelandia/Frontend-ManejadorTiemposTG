@@ -4,7 +4,7 @@ export class NavbarPage {
     linkHome = element(by.xpath('/html/body/app-root/app-navbar/nav/a[1]'));
     linkUsuarios = element(by.xpath('/html/body/app-root/app-navbar/nav/a[2]'));
     linkParques = element(by.xpath('/html/body/app-root/app-navbar/nav/a[3]'));
-    linkTiquetes = element(by.xpath('/html/body/app-root/app-navbar/nav/a[4]'));
+    linkProcesos = element(by.xpath('/html/body/app-root/app-navbar/nav/a[4]'));
 
 
       async clickBotonUsuarios() {
@@ -13,7 +13,7 @@ export class NavbarPage {
       async clickBotonParques() {
         await this.linkParques.click();
     }
-    async clickBotonTiquetes() {
-      await this.linkTiquetes.click();
+    async clickBotonProcesos() {
+      await this.linkProcesos.click();
     }
 }

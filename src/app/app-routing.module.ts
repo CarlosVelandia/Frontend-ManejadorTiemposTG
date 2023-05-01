@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
   { path: 'parques', loadChildren: () => import('@parque/parque.module').then(mod => mod.ParqueModule) },
-  { path: 'tiquetes', loadChildren: () => import('@tiquete/tiquete.module').then(mod => mod.TiqueteModule) },
+  { path: 'procesos', loadChildren: () => import('@proceso/proceso.module').then(mod => mod.ProcesoModule) },
   { path: 'usuarios', loadChildren: () => import('@usuario/usuario.module').then(mod => mod.UsuarioModule) }];
 
 @NgModule({

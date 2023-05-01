@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrearTiqueteComponent } from './components/crear-tiquete/crear-tiquete.component';
-import { ListarTiqueteComponent } from './components/listar-tiquete/listar-tiquete.component';
+import { CrearProcesoComponent } from './components/crear-proceso/crear-proceso.component';
+import { ListarProcesoComponent } from './components/listar-proceso/listar-proceso.component';
 
 const routes: Routes = [
   {
@@ -9,11 +9,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: ListarTiqueteComponent
+        component: ListarProcesoComponent
       },
       {
         path: 'crear',
-        component: CrearTiqueteComponent
+        component: CrearProcesoComponent
       }
     ]
   }
@@ -23,4 +23,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TiqueteRoutingModule { }
+export class ProcesoRoutingModule { }
