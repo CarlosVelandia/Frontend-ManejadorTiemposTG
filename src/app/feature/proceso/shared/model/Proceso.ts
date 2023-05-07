@@ -1,7 +1,7 @@
 export class Proceso{
     id:number;
     idUsuario:string;
-    idParque:string;
+    idEtapa:string;
     fechaCompra:string;
     valor:number;
 }

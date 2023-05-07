@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SwalService } from '@core/services/swal.service';
-import { Parque } from '@parque/shared/model/Parque';
-import { ParqueService } from '@parque/shared/service/parque.service';
+import { Etapa } from '@etapa/shared/model/Etapa';
+import { EtapaService } from '@etapa/shared/service/etapa.service';
 import { Observable } from 'rxjs';
 import { Proceso } from 'src/app/feature/proceso/shared/model/Proceso';
 import { Usuario } from 'src/app/feature/usuario/shared/model/Usuario';
@@ -18,20 +18,20 @@ export class CrearProcesoComponent implements OnInit {
 
 
   proceso:Proceso=new Proceso();
-  public parques:Observable<Parque[]>;
+  public etapas:Observable<Etapa[]>;
   public usuarios:Observable<Usuario[]>;
 
   constructor(
     private router:Router,
     private service:ProcesoService,
-    private serviceParque:ParqueService,
+    private serviceEtapa:EtapaService,
     private serviceUsuario:UsuarioService,
     protected swalService: SwalService,
     ) { }
 
   ngOnInit() {
 
-    this.parques = this.serviceParque.getParques();
+    this.etapas = this.serviceEtapa.getEtapas();
     this.usuarios = this.serviceUsuario.getUsuarios();
   }
 

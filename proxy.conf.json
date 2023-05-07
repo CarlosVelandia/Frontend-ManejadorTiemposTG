@@ -1,5 +1,5 @@
 {
-  "/procesos-parque-diversiones/*": {
+  "/procesos-etapa-diversiones/*": {
     "target": "http://localhost:8084",
     "secure" : false,
     "changeOrigin": false,

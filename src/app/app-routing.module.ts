@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
-  { path: 'parques', loadChildren: () => import('@parque/parque.module').then(mod => mod.ParqueModule) },
+  { path: 'etapas', loadChildren: () => import('@etapa/etapa.module').then(mod => mod.EtapaModule) },
   { path: 'procesos', loadChildren: () => import('@proceso/proceso.module').then(mod => mod.ProcesoModule) },
   { path: 'usuarios', loadChildren: () => import('@usuario/usuario.module').then(mod => mod.UsuarioModule) }];
 

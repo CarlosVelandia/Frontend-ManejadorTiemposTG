@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  endpoint: '/procesos-parque-diversiones'
+  endpoint: '/procesos-etapa-diversiones'
 };
 
 /*

@@ -33,8 +33,8 @@
       "@producto/*": [
         "src/app/feature/producto/*"
       ],
-      "@parque/*": [
-        "src/app/feature/parque/*"
+      "@etapa/*": [
+        "src/app/feature/etapa/*"
       ],
       "@proceso/*": [
         "src/app/feature/proceso/*"

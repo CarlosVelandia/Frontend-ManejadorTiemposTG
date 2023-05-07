@@ -15,7 +15,7 @@
           <tr class="text-center">
             <th>ID</th>
             <th>USUARIO</th>
-            <th>PARQUE</th>
+            <th>ETAPA</th>
             <th>FECHA COMPRA</th>
             <th>VALOR</th>
           </tr>
@@ -24,7 +24,7 @@
           <tr *ngFor="let proceso of procesos | async" class="text-center tablaProcesos">
             <td>{{proceso.id}}</td>
             <td>{{proceso.idUsuario.nombre}}</td>
-            <td>{{proceso.idParque.nombre}}</td>
+            <td>{{proceso.idEtapa.nombre}}</td>
             <td>{{proceso.fechaCompra | date:'dd-MM-yyyy'}}</td>
             <td>{{proceso.valor}}</td>
             <td>

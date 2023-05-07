@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ParqueService } from '@parque/shared/service/parque.service';
+import { EtapaService } from '@etapa/shared/service/etapa.service';
 import { UsuarioService } from '@usuario/shared/service/usuario.service';
 import { CrearProcesoComponent } from './components/crear-proceso/crear-proceso.component';
 import { ListarProcesoComponent } from './components/listar-proceso/listar-proceso.component';
@@ -30,7 +30,7 @@ import { ProcesoRoutingModule } from './proceso-routing.module';
 
   providers: [
     ProcesoService,
-    ParqueService,
+    EtapaService,
     UsuarioService
   ]
 })
